@@ -15,7 +15,7 @@ public class OptionOfCard : MonoBehaviour
         switch (card)
         {
             default:
-                Debug.Log("This Option has been updated yet!!!");
+                //Debug.Log("This Option has been updated yet!!!");
                 break;
             case 0:
             {

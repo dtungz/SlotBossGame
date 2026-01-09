@@ -5,50 +5,58 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 public class Casino : MonoBehaviour
 {
-    [SerializeField] private CasinoAction _action;
-    [SerializeField] private List<OptionOfCard> _optionOfCard = new List<OptionOfCard>();
-    WaitForSeconds delayTime = new WaitForSeconds(1f);
-    Coroutine RollCoroutine;
-    //public bool CanRoll = true;
-    int AttackSlot = 0, HealthSlot = 0, CointSlot = 0;
+    [SerializeField] private CasinoAction action;
+    [SerializeField] private List<OptionOfCard> optionOfCard = new List<OptionOfCard>();
+    private WaitForSeconds _delayTime = new WaitForSeconds(1f);
+    private Coroutine _rollCoroutine;
+    private int _attackSlot = 0, _healthSlot = 0, _cointSlot = 0;
+
+    private void Awake()
+    {
+        if (action == null)
+        {
+            action = GetComponent<CasinoAction>();
+        }
+    }
+
     public void Rolling()
     {
-        if (RollCoroutine == null)
+        if (_rollCoroutine == null)
         {
-            RollCoroutine = StartCoroutine(RollSlot());
+            _rollCoroutine = StartCoroutine(RollSlot());
         }
     }
 
     IEnumerator RollSlot()
     {
-        for (int i = 0; i < _optionOfCard.Count; i++)
+        for (int i = 0; i < optionOfCard.Count; i++)
         {
-            int SlotOption = Random.Range(0, 3);
-            _optionOfCard[i].Excute(SlotOption);
-            switch (SlotOption)
+            int slotOption = Random.Range(0, 3);
+            optionOfCard[i].Excute(slotOption);
+            switch (slotOption)
             {
                 case 0:
                 {
-                    AttackSlot++;
+                    _attackSlot++;
                     break;
                 }
                 case 1:
                 {
-                    HealthSlot++;
+                    _healthSlot++;
                     break;
                 }
                 case 2:
                 {
-                    CointSlot++;
+                    _cointSlot++;
                     break;
                 }
             }
-            yield return delayTime;
+            yield return _delayTime;
         }
-        _action.Casino(AttackSlot, HealthSlot, CointSlot);
-        RollCoroutine = null;
-        AttackSlot = 0; HealthSlot = 0;  CointSlot = 0;
-        foreach (var opt in _optionOfCard)
+        action.Casino(_attackSlot, _healthSlot, _cointSlot);
+        _rollCoroutine = null;
+        _attackSlot = 0; _healthSlot = 0;  _cointSlot = 0;
+        foreach (var opt in optionOfCard)
         {
             opt.Reset();         
         }

@@ -1,29 +1,36 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CasinoAction : MonoBehaviour
 {
-    [SerializeField] private Boss boss;
+    private BossController _boss;
     [SerializeField] private ShowStat _Stat;
+    BossController _currentBoss;
     
-    public void Casino(int AttackValue, int HealthValue, int CointValue)
+    public void Casino(int attackValue, int healthValue, int cointValue)
     {
-        if (AttackValue > 0)
+        if (attackValue > 0)
         {
-            boss.OnAttack(AttackValue * StatManager.Instance.GetAttack());
+            _currentBoss.TakeDamage(attackValue * StatManager.Instance.GetAttack());
         }
 
-        if (HealthValue > 0)
+        if (healthValue > 0)
         {
-            StatManager.Instance.ChangeHealth(HealthValue);
+            StatManager.Instance.ChangeHealth(healthValue);
             _Stat.ShowHealth();
         }
 
-        if (CointValue > 0)
+        if (cointValue > 0)
         {
-            StatManager.Instance.IncCoint(CointValue);
+            StatManager.Instance.IncCoint(cointValue);
             _Stat.ShowCoint();
         }
-        boss.BossTurn();
+        //boss.BossTurn();
+    }
+
+    public void GetBoss(BossController boss)
+    {
+        _currentBoss = boss;
     }
 }

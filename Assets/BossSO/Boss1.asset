@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f72a5c45e36aa14e90b46e1448daf7f, type: 3}
   m_Name: Boss1
   m_EditorClassIdentifier: Assembly-CSharp::BossStatSO
-  MaxHp: 50
-  Shield: 0
-  DamageOnHit: 1
+  maxHp: 50
+  damageOnHit: 1
+  animatorController: {fileID: 9100000, guid: c97c10e9a3e60eb4ea03b744c72c68ca, type: 2}
