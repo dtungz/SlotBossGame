@@ -6,11 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="552d825a-d4ec-4151-a2d2-c566bb6ae872" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SlotBossGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SlotBossGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BossSO/Boss1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BossSO/Boss1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Boss.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Boss.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/BossStatSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/BossStatSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CasinoAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CasinoAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2_Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/OptionOfCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/OptionOfCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime1_Attack_body.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime1_Attack_body.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime1_Hurt_body.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime1_Hurt_body.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime1_Idle_body.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime1_Idle_body.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime2_Idle_body.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Slime2_Idle_body.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +135,8 @@
       <updated>1767876940081</updated>
       <workItem from="1767876941804" duration="3000" />
       <workItem from="1767877095390" duration="13991000" />
-      <workItem from="1767957065025" duration="22052000" />
+      <workItem from="1767957065025" duration="22465000" />
+      <workItem from="1768056653625" duration="3283000" />
     </task>
     <servers />
   </component>

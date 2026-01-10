@@ -1,57 +1,43 @@
 using System;
+using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class OptionOfCard : MonoBehaviour
 {
-    private SpriteRenderer _spriteRenderer;
+    private Animator _anim;
+    
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _anim = GetComponent<Animator>();
     }
 
     public void Excute(int card)
     {
         switch (card)
         {
-            default:
-                //Debug.Log("This Option has been updated yet!!!");
-                break;
             case 0:
             {
-                Attack();
+                _anim.SetTrigger("Attack");
                 break;
             }
             case 1:
             {
-                Health();
+                _anim.SetTrigger("Health");
                 break;
             }
             case 2:
             {
-                Coin();
+                _anim.SetTrigger("Coint");
                 break;
             }
         }
+        //_currentCard = card;
     }
     
-    void Attack()
-    {
-        _spriteRenderer.color = Color.blue;
-    }
-
-    void Health()
-    {
-        _spriteRenderer.color = Color.red;
-    }
-
-    void Coin()
-    {
-        _spriteRenderer.color = Color.yellow;
-    }
-
     public void Reset()
     {
-        _spriteRenderer.color = Color.white;
+        _anim.SetTrigger("Reset");
     }
 }
