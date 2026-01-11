@@ -43,6 +43,7 @@ public class BossController : MonoBehaviour
 
     public void Attack()
     {
+        Debug.Log("Enemy Attack");
         _bossAttack.Attack(damage);
     }
 }

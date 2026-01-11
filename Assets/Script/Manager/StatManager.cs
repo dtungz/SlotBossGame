@@ -1,11 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StatManager : Singleton<StatManager>
 {
     private int Attack = 10;
     private int Health = 10;
     private int Coint = 0;
+    
+    public UnityEvent onStateChange = new UnityEvent();
+    
     protected override void Awake()
     {
         base.Awake();
@@ -13,18 +17,22 @@ public class StatManager : Singleton<StatManager>
     }
     
 
-    public void IncAttack(int value)
+    public void ChangeAttack(int value)
     {
         Attack += value;
+        onStateChange?.Invoke();
+        
     }
     public void ChangeHealth(int value)
     {
         Health += value;
+        onStateChange?.Invoke();
     }
 
-    public void IncCoint(int value)
+    public void ChangeCoint(int value)
     {
         Coint += value;
+        onStateChange?.Invoke();
     }
 
     public int GetAttack()

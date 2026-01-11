@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class CasinoAction : MonoBehaviour
 {
-    private BossController _boss;
+    //private BossController _boss;
     [SerializeField] private ShowStat _Stat;
     BossController _currentBoss;
     
@@ -18,15 +18,13 @@ public class CasinoAction : MonoBehaviour
         if (healthValue > 0)
         {
             StatManager.Instance.ChangeHealth(healthValue);
-            _Stat.ShowHealth();
         }
 
         if (cointValue > 0)
         {
-            StatManager.Instance.IncCoint(cointValue);
-            _Stat.ShowCoint();
+            StatManager.Instance.ChangeCoint(cointValue);
         }
-        //boss.BossTurn();
+        _currentBoss.Attack();
     }
 
     public void GetBoss(BossController boss)

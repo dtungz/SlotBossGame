@@ -6,8 +6,8 @@ public class BuyingStat : MonoBehaviour
     {
         if(StatManager.Instance.GetCoint() > 0)
         {
-            StatManager.Instance.IncCoint(-value);
-            StatManager.Instance.IncAttack(value);
+            StatManager.Instance.ChangeCoint(-value);
+            StatManager.Instance.ChangeAttack(value);
         }
     }
 
@@ -15,7 +15,7 @@ public class BuyingStat : MonoBehaviour
     {
         if (StatManager.Instance.GetCoint() > 0)
         {
-            StatManager.Instance.IncCoint(-value);
+            StatManager.Instance.ChangeCoint(-value);
             StatManager.Instance.ChangeHealth(value);
         }
     }
