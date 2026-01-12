@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="552d825a-d4ec-4151-a2d2-c566bb6ae872" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SlotBossGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SlotBossGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2_Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2_Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2_Hurt.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2_Hurt.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy1/Enemy1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy1/Enemy1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy2/Enemy2.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/BossController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/BossController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CasinoAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CasinoAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/SpawnBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/SpawnBoss.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/BossAttack/DoubleHit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/BossAttack/Hit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/BossAttack/TribbleHit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/BossController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/BuyingStat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Casino.cs" root0="FORCE_HIGHLIGHTING" />

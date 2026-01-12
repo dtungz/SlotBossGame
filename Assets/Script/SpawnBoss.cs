@@ -29,8 +29,8 @@ public class SpawnBoss : MonoBehaviour
     {
         if (_currentBoss != null)
         {
-            Destroy(_currentBoss.gameObject);
             yield return new WaitForSeconds(0.6f);
+            Destroy(_currentBoss.gameObject);
         }
         if (bossIndex < boss.Count)
         {

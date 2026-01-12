@@ -32,15 +32,17 @@ public class BossController : MonoBehaviour
     public void TakeDamage(int value)
     {
         _bossHealth.TakeDamage(value);
-        animator.SetTrigger("Hurt");
         if (_bossHealth.IsDead())
         {
             Die();
+            return;
         }
+        animator.SetTrigger("Hurt");
     }
     
     private void Die()
     {
+        animator.SetTrigger("Death");
         dieEvent?.Invoke();
     }
 
