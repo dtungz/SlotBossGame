@@ -1756,8 +1756,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnBoss
   boss:
-  - {fileID: 1892592803450771596, guid: fa86c44f090d9bd41862a6c7593cd401, type: 3}
   - {fileID: 6179100987987152138, guid: 64d278c74f0a0ea469062859d4fa6170, type: 3}
+  - {fileID: 1892592803450771596, guid: fa86c44f090d9bd41862a6c7593cd401, type: 3}
   - {fileID: 6179100987987152138, guid: 64d278c74f0a0ea469062859d4fa6170, type: 3}
   casino: {fileID: 1378453741}
   healthBar: {fileID: 2091330432}

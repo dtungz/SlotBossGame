@@ -10,12 +10,14 @@ public class BossController : MonoBehaviour
     public IAttackable _bossAttack;
     [SerializeField] private int damage;
     [SerializeField] private int health;
+    [SerializeField] private Animator animator;
     public UnityEvent dieEvent;
 
     private void OnEnable()
     {
         _bossHealth = GetComponent<Health>();
         _bossAttack = GetComponent<IAttackable>();
+        animator = GetComponent<Animator>();
         if (_bossAttack == null || _bossAttack == null)
         {
             Debug.Log("Thieu Reference");
@@ -30,6 +32,7 @@ public class BossController : MonoBehaviour
     public void TakeDamage(int value)
     {
         _bossHealth.TakeDamage(value);
+        animator.SetTrigger("Hurt");
         if (_bossHealth.IsDead())
         {
             Die();
@@ -43,7 +46,10 @@ public class BossController : MonoBehaviour
 
     public void Attack()
     {
-        Debug.Log("Enemy Attack");
+        //Debug.Log("Enemy Attack");
+        if(_bossHealth.IsDead())
+            return;
+        animator.SetTrigger("Attack");
         _bossAttack.Attack(damage);
     }
 }
