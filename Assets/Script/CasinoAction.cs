@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PrimeTween;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CasinoAction : MonoBehaviour
 {
-    //private BossController _boss;
     [SerializeField] private ShowStat _Stat;
     BossController _currentBoss;
     
@@ -26,16 +26,9 @@ public class CasinoAction : MonoBehaviour
         {
             StatManager.Instance.ChangeCoint(cointValue);
         }
-        //_currentBoss.Attack();
-        StartCoroutine(BossTurnAttack());
+        Tween.Delay(0.5f, ()=> _currentBoss.Attack());
+        
     }
-
-    IEnumerator BossTurnAttack()
-    {
-      yield return new WaitForSeconds(0.5f);
-      _currentBoss.Attack();
-    }
-    
     public void GetBoss(BossController boss)
     {
         _currentBoss = boss;
